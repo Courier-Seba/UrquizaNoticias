@@ -12,10 +12,13 @@
 <body>
 <header class="navbar" style="margin: 1rem; border">
   <section class="navbar-section">
-    <a href="..." class="navbar-brand mr-2">Trabajo Practico</a>
+    <a href="{% url 'home' %}" class="navbar-brand mr-2">Trabajo Practico</a>
     <a href="..." class="btn btn-link">Usuario</a>
     <a href="..." class="btn btn-link">Avisos</a>
   </section>
+    <section class="navbar-center">
+      <img src="{% static 'logo.png' %}" alt="Urquiza" style="height: 32px; width: 42">
+    </section>
   <section class="navbar-section">
     <a href="..." class="btn btn-link">Alumno</a>
   </section>

@@ -1,8 +1,48 @@
-
 {% extends '_base.html' %}
 
-{% block title %}Home page{% endblock title %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
 
 {% block content %}
-Home
+<div class="hero hero-lg">
+  <div class="hero-body">
+    <div class="container">
+    <div class="columns">
+        <div class="column col-8">
+        </div>
+
+
+        <div class="column col-3">
+          <div class="card">
+            <div class="card-header">
+              <div class="columns">
+                <div class="column col-8">
+                  <div class="card-title h5">Iniciar Sesión</div>
+                </div>
+                <div class="column col-3">
+                  <img src="{% static 'logo-escuela.jpg' %}" class="img-responsive float-right" style="max-height:64px">
+                </div>
+              </div>
+              <div class="card-subtitle text-gray"> Bienvenido al sitio de noticias de la urquiza </div>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label class="form-label" for="input-example-1">Usuario</label>
+                <input class="form-input" type="text" id="input-example-1" placeholder="Usuario">
+
+                <label class="form-label" for="input-example-1">Contraseña</label>
+                <input class="form-input" type="text" id="input-example-1" placeholder="Contraseña">
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Iniciar</button>
+              <button class="btn btn-secondary">Registrarse</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}
