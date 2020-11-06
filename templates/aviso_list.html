@@ -1,0 +1,14 @@
+{% extends "_base.html" %}
+
+{% block title %}Avisos{% endblock %}
+
+
+{% block content %}
+    <ul>
+    {% for aviso in object_list %}
+        <li>{{ aviso.titulo }} - {{ aviso.created_at }}</li>
+    {% empty %}
+        <li>No articles yet.</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
