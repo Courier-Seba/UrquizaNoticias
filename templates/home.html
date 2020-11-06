@@ -5,7 +5,7 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-<div class="hero hero-lg">
+<div class="hero hero-lg" style="margin-left:10%">
   <div class="hero-body">
     <div class="container">
     <div class="columns">
@@ -13,44 +13,6 @@
           <div class="text-left">
             <h1 class="text-primary text-large">Sitio de avisos del teciario</h1>
             <h1 class="text-gray text-large">En este lugar encontrara avisos sobre la institución.</h1>
-          </div>
-        </div>
-
-        <div class="column col-3">
-          <div class="card">
-            <div class="card-header">
-              <div class="columns">
-                <div class="column col-8">
-                  <div class="card-title h5">Iniciar Sesión</div>
-                </div>
-                <div class="column col-3">
-                  <img src="{% static 'logo-escuela.jpg' %}" class="img-responsive float-right" style="max-height:64px">
-                </div>
-              </div>
-              <div class="card-subtitle text-gray"> Bienvenido al sitio de noticias de la urquiza </div>
-            </div>
-            <div class="card-body">
-              <div class="form-group">
-                <label class="form-label" for="input-example-1">Usuario</label>
-                <input class="form-input" type="text" id="input-example-1" placeholder="Usuario">
-
-                <label class="form-label" for="input-example-1">Contraseña</label>
-                <input class="form-input" type="text" id="input-example-1" placeholder="Contraseña">
-              </div>
-            </div>
-            <div class="card-footer">
-              <div class="columns">
-                <div class="column col-3">
-                  <button class="btn btn-primary">Iniciar</button>
-                </div>
-                <div class="divider-vert"></div>
-                <div class="column col-3">
-                  <a href="{% url 'register' %}">
-                    <button class="btn btn-secondary">Registrarse</button>
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

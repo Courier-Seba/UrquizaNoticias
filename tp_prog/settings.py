@@ -128,3 +128,5 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 # Custom user
 AUTH_USER_MODEL = 'user.UrquizaUser'
+
+LOGIN_REDIRECT_URL = '/'

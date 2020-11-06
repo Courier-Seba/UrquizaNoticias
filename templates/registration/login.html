@@ -3,19 +3,7 @@
 {% block title%} Iniciar sesion {% endblock %}
 
 {% block content %}
-  <div class="hero-lg" style="margin-left:10%">
-    {% if form.errors %}
-      <p>Nombre de usuario o contraseña incorrectos</p>
-    {% endif %}
-    
-    {% if next %}
-      {% if user.is_authenticated %}
-        <p class="text-error">Ya esta logeado</p>
-      {% else %}
-        <p>Solo para usuarios del sitio</p>
-      {% endif %}
-    {% endif %}
-    
+  <div class="hero-lg" style="margin-left:10%; margin-top:10%">
     <form method="post" action="{% url 'login' %}">
       {% csrf_token %}
       <table>
@@ -34,5 +22,17 @@
 
     {# Assumes you setup the password_reset view in your URLconf #}
     <p><a href="{% url 'password_reset' %}">Olvido contraseña?</a></p>
+    {% if form.errors %}
+      <p class="text-bold text-error">Nombre de usuario o contraseña incorrectos</p>
+    {% endif %}
+
+    {% if next %}
+      {% if user.is_authenticated %}
+        <p class="text-error">Ya esta logeado</p>
+      {% else %}
+        <p class="text-error">Solo para usuarios del sitio</p>
+      {% endif %}
+    {% endif %}
+
   </div>
 {% endblock %}
