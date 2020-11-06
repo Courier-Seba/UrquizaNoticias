@@ -4,11 +4,23 @@
 
 
 {% block content %}
-    <ul>
-    {% for aviso in object_list %}
-        <li>{{ aviso.titulo }} - {{ aviso.created_at }}</li>
-    {% empty %}
-        <li>No articles yet.</li>
-    {% endfor %}
-    </ul>
+    <div class="container" style="margin-left:10%">
+      <div class="columns">
+        {% for aviso in object_list %}
+        <div class="column col-12">
+            <h2 class="text-primary text-bold text-large">
+                {{ aviso.titulo }}
+            </h2>
+            <h5 class="text-secondary">{{ aviso.created_at }}</h5>
+            <p class="text-dark">{{ aviso.descripcion }}</p>
+            <p class="text-center">
+                Contacto: {{ aviso.contacto }}
+            </p>
+            <div class="divider text-center"></div>
+        </div>
+        {% empty %}
+        <div class="column col-12">Sin avisos</div>
+        {% endfor %}
+      </div>
+    </div>
 {% endblock %}
