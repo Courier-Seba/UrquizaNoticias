@@ -14,13 +14,15 @@
 <header class="navbar" style="margin: 1rem; border">
   <section class="navbar-section">
     <a href="{% url 'home' %}" class="navbar-brand mr-2">Avisos terciario</a>
-    <a href="" class="btn btn-link">Usuario</a>
     <a href="{% url 'avisos-list' %}" class="btn btn-link">Avisos</a>
+    {% if user.is_authenticated %}
+      <a href="" class="btn btn-link">Usuario</a>
+    {% endif %}
   </section>
     <section class="navbar-center">
       <img src="{% static 'logo.png' %}" alt="Urquiza" style="height: 32px; width: 42">
     </section>
-  <section class="navbar-section">
+    <section class="navbar-section">
     <a href="{% url 'us' %}" class="btn btn-link">Sobre nosotros</a>
   </section>
 </header>
