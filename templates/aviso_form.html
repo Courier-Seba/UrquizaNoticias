@@ -1,0 +1,22 @@
+{% extends "_base.html" %}
+
+{% block title %}Nuevo Aviso{% endblock %}
+
+
+{% block content %}
+<div class="container">
+  <form method="post">
+    {% csrf_token %}
+    <div class="columns">
+      <div class="column text-primary">
+        {{ form.as_p }}
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column">
+        <button type="submit" class="btn">Guardar</button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

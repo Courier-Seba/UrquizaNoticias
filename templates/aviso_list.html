@@ -4,8 +4,10 @@
 
 
 {% block content %}
-    <div class="container" style="margin-left:10%">
-      <div class="columns">
+    <div class="container">
+      <a class="btn p-fixed" href="{% url 'nuevo-aviso' %}" style="margin-top: 10px">Nuevo</a>
+      <div class="divider"></div>
+      <div class="columns" style="margin-top: 2.5rem">
         {% for aviso in object_list %}
         <div class="column col-12">
             <h2 class="text-primary text-bold text-large">
