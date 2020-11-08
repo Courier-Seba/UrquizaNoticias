@@ -1,13 +1,15 @@
 {% extends '_base.html' %}
 
+{% block title %}Registrarse{% endblock %}
+
 {% block content %}
     <br>
     <form method="POST">
         {% csrf_token %}
         {{form}}
-        <button style=" color:blue" class="btn btn-outline-info" type="submit">Sign Up</button>
+        <button style=" color:blue" class="btn btn-outline-info" type="submit">Registrarse</button>
     </form>
 
-    If you already have an account <a href="{% url 'login' %}"><strong>login</strong></a> instead.
+    Si ya tiene una cuenta dirijase a <a href="{% url 'login' %}"><strong>iniciar sesión</strong></a>.
 
 {% endblock %}

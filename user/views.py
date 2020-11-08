@@ -15,14 +15,18 @@ def register(request):
             return redirect("home")
 
         else:
-            for msg in form.error_messages:
-                print(form.error_messages[msg])
+            for mensaje in form.error_messages:
+                print(form.error_messages[mensaje])
 
-            return render(request = request,
-                          template_name = "register.html",
-                          context={"form":form})
+            return render(
+                request=request,
+                template_name="register.html",
+                context={"form":form}
+            )
 
     form = UserCreationForm
-    return render(request = request,
-                  template_name = "register.html",
-                  context={"form":form})
+    return render(
+        request = request,
+        template_name = "register.html",
+        context={"form":form}
+    )
