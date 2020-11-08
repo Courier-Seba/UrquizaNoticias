@@ -16,7 +16,7 @@
     <a href="{% url 'home' %}" class="navbar-brand mr-2">Avisos terciario</a>
     <a href="{% url 'avisos-list' %}" class="btn btn-link">Avisos</a>
     {% if user.is_authenticated %}
-    <a href="{% url 'password_change' %}" class="btn btn-link">Usuario</a>
+    <a href="{% url 'change_password' %}" class="btn btn-link">Usuario</a>
     {% endif %}
   </section>
     <section class="navbar-center">
