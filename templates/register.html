@@ -3,13 +3,28 @@
 {% block title %}Registrarse{% endblock %}
 
 {% block content %}
-    <br>
-    <form method="POST">
-        {% csrf_token %}
-        {{form}}
-        <button style=" color:blue" class="btn btn-outline-info" type="submit">Registrarse</button>
-    </form>
-
-    Si ya tiene una cuenta dirijase a <a href="{% url 'login' %}"><strong>iniciar sesión</strong></a>.
+    <div class="container">
+        <div class="columns">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="column col-12">
+                    <div class="text-primary text-bold m-2 d-block">
+                        {{form.as_p}}
+                    </div>
+                </div>
+                <div class="column col-4">
+                    <button class="btn btn-outline-info m-2" type="submit">Registrarse</button>
+                </div>
+            </form>
+        </div>
+        <br />
+        <div class="divider-vert" data-content="O"></div>
+        <br />
+        <div class="columns">
+            <div class="column col-8 m-1">
+                Si ya tiene una cuenta dirijase a <a href="{% url 'login' %}"><strong>iniciar sesión</strong></a>.
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
