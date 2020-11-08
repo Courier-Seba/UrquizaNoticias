@@ -5,7 +5,9 @@
 
 {% block content %}
     <div class="container">
+      {% if user.is_authenticated %}
       <a class="btn p-fixed" href="{% url 'nuevo-aviso' %}" style="margin-top: 10px">Nuevo</a>
+      {% endif %}
       <div class="divider"></div>
       <div class="columns" style="margin-top: 2.5rem">
         {% for aviso in object_list %}

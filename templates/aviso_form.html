@@ -8,13 +8,13 @@
   <form method="post">
     {% csrf_token %}
     <div class="columns">
-      <div class="column text-primary">
+      <div class="column text-primary col-12" style="margin: 1rem" >
         {{ form.as_p }}
       </div>
     </div>
     <div class="columns">
       <div class="column">
-        <button type="submit" class="btn">Guardar</button>
+        <button type="submit" class="btn" style="margin: 1rem">Guardar</button>
       </div>
     </div>
   </form>
