@@ -8,15 +8,19 @@
       {% csrf_token %}
       <table>
         <tr>
-          <td>{{ form.username.label_tag }}</td>
-          <td>{{ form.username }}</td>
+          <div class="form-group">
+            <label class="form-label" for="input-example-1">{{ form.username.label_tag }}</label>
+            {{ form.username }}
+          </div>
         </tr>
         <tr>
-          <td>{{ form.password.label_tag }}</td>
-          <td>{{ form.password }}</td>
+          <div class="form-group">
+            <label class="form-label" for="input-example-1">{{ form.password.label_tag }}</label>
+            {{ form.password }}
+          </div>
         </tr>
       </table>
-      <input type="submit" value="Iniciar sesion" />
+      <input type="submit" class="btn" value="Iniciar sesion" />
       <input type="hidden" name="next" value="{{ next }}" />
     </form>
 
